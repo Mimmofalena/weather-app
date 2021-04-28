@@ -16,7 +16,7 @@ btn.addEventListener("click", function (e) {
   const city = input.value;
 
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}
           `
   )
     .then((response) => {
