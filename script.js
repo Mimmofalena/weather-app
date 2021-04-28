@@ -13,12 +13,16 @@ const API_KEY = "1208613478be6d68e54a8bb2e423956d";
 btn.addEventListener("click", function (e) {
   e.preventDefault();
 
+  let url;
   const city = input.value;
-
-  fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}
-          `
-  )
+  if (location.protocol === "http:") {
+    url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}
+    `;
+  } else {
+    url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}
+    `;
+  }
+  fetch(url)
     .then((response) => {
       if (!response.ok) throw Error("Wrong city");
 
@@ -48,7 +52,3 @@ btn.addEventListener("click", function (e) {
       alert(err.message);
     });
 });
-
-// const prova = "roma";
-
-// console.log(prova[0].toUpper);
