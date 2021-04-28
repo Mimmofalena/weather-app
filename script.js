@@ -7,8 +7,7 @@ const temp = document.querySelector(".display-weather .temperature");
 const wind = document.querySelector(".display-weather .wind");
 const description = document.querySelector(".display-weather .description");
 const weatherForm = document.querySelector(".display-weather");
-console.log(temp);
-console.log(cityName);
+
 const API_KEY = "1208613478be6d68e54a8bb2e423956d";
 
 btn.addEventListener("click", function (e) {
@@ -17,11 +16,11 @@ btn.addEventListener("click", function (e) {
   const city = input.value;
 
   fetch(
-    `https://mimmofalena.github.io/weather-app/api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}
+    `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}
           `
   )
     .then((response) => {
-      if (!response.ok) throw new Error("Wrong city");
+      if (!response.ok) throw Error("Wrong city");
 
       return response.json();
     })
