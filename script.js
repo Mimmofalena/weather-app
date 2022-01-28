@@ -54,10 +54,12 @@ btn.addEventListener("click", function (e) {
       wind.textContent = `${weatherWindSpeed.toFixed(1)}mt/sec`;
 
       const countryCode = data.sys.country;
-      const flagUrl = `https://countryflagsapi.com/svg/${countryCode}`;
+      const flagUrl = `https://countryflagsapi.com/png/${countryCode}`;
 
       flagIcon.src = flagUrl;
       icon.src = iconUrl;
+
+      console.log(document.querySelector(".flag-icon").classList);
 
       weatherForm.classList.remove("hide");
     })

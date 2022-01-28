@@ -132,12 +132,17 @@ section > h3 {
   font-size: 1.2em;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  padding: 1rem;
 }
 
-img {
-  height: 36px;
-  width: 36px;
-  border-radius: 4px;
+.img-container {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-img {
+  width: 50px;
 }
 
 .alert-container {
