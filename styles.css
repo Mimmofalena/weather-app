@@ -1,3 +1,9 @@
+:root {
+  --primary: #65d5e6;
+  --secondary: #82c2cc;
+  --tertiary: #e68a65;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +12,11 @@
 }
 
 body {
+  background-image: url("../weather-app/assets/background-picture.webp");
   /* background-color: #264653; */
-  background-image: linear-gradient(45deg, #cebdbad7, #368868a9);
+  /* background-color: var(--secondary); */
   background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
 }
 
@@ -18,7 +26,7 @@ header {
   padding: 1rem;
   text-align: center;
   margin-bottom: 3rem;
-  background-color: whitesmoke;
+  background-color: var(--primary);
 }
 
 .form {
@@ -27,7 +35,7 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: #94b9b5;
+  background-color: var(--secondary);
   padding: 1rem;
   width: 90%;
   /* max-width: 60%; */
@@ -64,8 +72,8 @@ header {
   text-align: right;
   margin: 0 1rem 0.5rem 0;
   align-self: flex-end;
-  background-color: #e9c46a;
-  border-color: rgba(0, 0, 0, 0);
+  background-color: var(--primary);
+  border-color: rgba(0, 0, 0, 0.1);
   color: black;
   border-radius: 14px;
   transition: 0.5s ease;
@@ -84,14 +92,13 @@ header {
 } */
 
 .display-weather {
-  background-color: brown;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 90%;
   margin: 0 auto;
   border-radius: 14px;
-  background-color: #94b9b5;
+  background-color: whitesmoke;
   animation: come-in 1s ease-in;
   box-shadow: 1px 2px 8px 4px rgba(0, 0, 0, 0.25);
   margin-top: 5rem;
@@ -107,7 +114,7 @@ section {
 
 section > h3 {
   font-size: 1.3rem;
-  background-color: whitesmoke;
+  background-color: var(--secondary);
   width: 100%;
   text-align: center;
   border-top-left-radius: 14px;
