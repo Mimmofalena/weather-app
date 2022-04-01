@@ -12,7 +12,7 @@
 }
 
 body {
-  background-image: url("/public/assets/sky.png");
+  background-image: url("/public/assets/background-picture.webp");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
