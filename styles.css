@@ -12,7 +12,7 @@
 }
 
 body {
-  background-image: url("../weather-app/public/assets/background-picture.webp");
+  background-image: url("../weather-app/public/assets/sky.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
