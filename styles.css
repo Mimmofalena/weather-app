@@ -12,10 +12,15 @@
 }
 
 body {
+ 
+  min-height: 100vh;
+}
+.main {
   background-image: url("../weather-app/public/assets/sky.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
+  
 }
 
 header {

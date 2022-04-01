@@ -16,87 +16,90 @@
   </head>
   <body>
 
+    <main class="main">
     <header>What's the weather like today?</header>
-<img alt="" src="./public/assets/sky.png">
-    <div class="alert-container">
 
-      <div class="alert-box hide">
-        <p class="alert-box_text"></p>
-      </div>
+  <!-- <img alt="" src="./public/assets/sky.png"> -->
+  <div class="alert-container">
+    
+    <div class="alert-box hide">
+      <p class="alert-box_text"></p>
     </div>
-    <!-- <form class="Input">
-      <div>
-        <label for="City Name"></label>
-        <input type="text" />
-        <button type="Submit">Go</button>
-      </div>
-    </form> -->
-
-
+  </div>
+  <!-- <form class="Input">
+    <div>
+      <label for="City Name"></label>
+      <input type="text" />
+      <button type="Submit">Go</button>
+    </div>
+  </form> -->
   
-
-
+  
+  
+  
+  
+  
+  <form class="form" >
     
-    <form class="form" >
-
-        <label class="label" for="city"> Enter City
-          <input class='input' type="text" id="City" placeholder="Search..." required />
-        </label>
+    <label class="label" for="city"> Enter City
+      <input class='input' type="text" id="City" placeholder="Search..." required />
+    </label>
+    
+    <button type="submit" class="btn">Submit</button>
+  </form>
+  
+  <section class="hide display-weather">
+    <h3>Results</h3>
+    <div class="grid">
+      <div class="item-container">
+        <p>City</p>
         
-      <button type="submit" class="btn">Submit</button>
-    </form>
-
-    <section class="hide display-weather">
-      <h3>Results</h3>
-      <div class="grid">
-        <div class="item-container">
-          <p>City</p>
+        <p class="city"></p>
+        
+      </div>
+      
+      <div class="item-container">
+        <p>Hum</p>
+        
+        <p class="humidity"></p>
+        
+      </div>
+      
+      <div class="item-container">
+        <p>Temp</p>
+        
+        <p class="temperature"></p>
+        
+      </div>
+      
+      <div class="item-container">
+        <p>Wind</p>
+        
+        <p class="wind"></p>
+        
+      </div >
+      
+      <div class="item-container">
+        <p>Sum</p>
+        <div class="img-container">
           
-            <p class="city"></p>
-         
-        </div>
-
-        <div class="item-container">
-      <p>Hum</p>
-         
-            <p class="humidity"></p>
-          
-        </div>
-
-        <div class="item-container">
-    <p>Temp</p>
-          
-            <p class="temperature"></p>
-          
-        </div>
-
-        <div class="item-container">
-    <p>Wind</p>
-          
-            <p class="wind"></p>
-         
-        </div >
-
-        <div class="item-container">
-          <p>Sum</p>
-          <div class="img-container">
-
-            <img class="icon-img icon" alt='Weather icon' src=''></img>
-          </div>
-         
-        </div>
-         <div class="item-container">
-          <p>State</p>
-         <div class="img-container">
-
-           <img class="icon-img flag-icon" alt='Weather icon' src=''></img>
-          </div>
-         
+          <img class="icon-img icon" alt='Weather icon' src=''></img>
         </div>
         
       </div>
-    </section>
-    
-    <script src="script.js"></script>
-  </body>
+      <div class="item-container">
+        <p>State</p>
+        <div class="img-container">
+          
+          <img class="icon-img flag-icon" alt='Weather icon' src=''></img>
+        </div>
+        
+      </div>
+      
+    </div>
+  </section>
+</main>    
+  
+  <script src="script.js"></script>
+</body>
 </html>
