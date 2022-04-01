@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mimmofalena/weather-app.git"
+    "url": "https://github.com/Mimmofalena/weather-app.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Mimmofalena/weather-app/issues"
   },
-  "homepage": "https://github.com/Mimmofalena/weather-app#readme"
+  "homepage": "https://github.com/Mimmofalena/weather-app"
 }
