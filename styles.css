@@ -1,47 +1,56 @@
 :root {
-  --primary: #65d5e6;
-  --secondary: #82c2cc;
+  --primary: #3478a3;
+  --secondary: #6fbdd9;
   --tertiary: #e68a65;
+  --text-primary: #ffffff;
+  --text-secondary: #333333;
+  --text-color: #333333; /* Colore del testo per un migliore contrasto */
+  --background-light: #e0eafc; /* Colore dello sfondo più chiaro */
+  --background-dark: #cfdef3; /* Colore dello sfondo più scuro */
+  --element-shadow: rgba(0, 0, 0, 0.25); /* Ombreggiatura per gli elementi */
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 18px;
+  font-family: "Helvetica Neue", sans-serif; /* Aggiunto font-family per coerenza */
 }
-
+html,
 body {
-  background-image: url("/public/assets/background-picture.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
   min-height: 100vh;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    var(--background-light),
+    var(--background-dark)
+  );
+  color: var(--text-color);
 }
 
 header {
   font-weight: bold;
+  height: 150px;
   font-size: 2rem;
   padding: 1rem;
   text-align: center;
-  margin-bottom: 3rem;
   background-color: var(--primary);
+  color: white;
+  box-shadow: 0 2px 4px var(--element-shadow);
 }
 
 .form {
   display: flex;
-  /* height: 350px; */
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   background-color: var(--secondary);
   padding: 1rem;
   width: 90%;
-  /* max-width: 60%; */
   border-radius: 14px;
   border: none;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  box-shadow: 1px 2px 8px 4px rgba(0, 0, 0, 0.25);
+  margin: 1rem auto;
+  box-shadow: 1px 2px 8px 4px var(--element-shadow);
 }
 
 .label {
@@ -56,75 +65,48 @@ header {
 }
 
 .input {
-  min-width: 80%;
-  margin-top: 1rem;
-  padding: 0.5rem;
-  border-radius: 14px;
-  border: none;
-  outline: none;
-  /* box-shadow: 1px 2px 4px rgba(0, 0, 0); */
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+input::placeholder {
+  color: var(--text-color);
 }
 
 .btn {
-  padding: 0.25rem 2rem;
-  text-align: right;
-  margin: 0 1rem 0.5rem 0;
-  align-self: flex-end;
-  background-color: var(--primary);
-  border-color: rgba(0, 0, 0, 0.1);
-  color: black;
-  border-radius: 14px;
-  transition: 0.5s ease;
+  background-color: var(--tertiary);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 .btn:hover,
 .btn:focus {
-  /* background-color: #f4a261;
-  border-color: #f4a261; */
-  opacity: 0.5;
-  color: black;
-  transform: scale(1.1);
-  -webkit-box-shadow: none;
+  background-color: darken(var(--tertiary), 10%);
 }
-
-/* .btn:hover {
-} */
 
 .display-weather {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 90%;
   margin: 0 auto;
   border-radius: 14px;
-  background-color: whitesmoke;
   animation: come-in 1s ease-in;
-  box-shadow: 1px 2px 8px 4px rgba(0, 0, 0, 0.25);
-  margin-top: 5rem;
-}
-.display-weather h3 {
-  font-weight: 600;
-  padding: 1rem;
-  align-self: center;
-}
-section {
-  width: 100%;
-}
-
-section > h3 {
-  font-size: 1.3rem;
-  background-color: var(--secondary);
-  width: 100%;
-  text-align: center;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  border-bottom: none;
+  background-color: white;
+  box-shadow: 1px 2px 8px 4px var(--element-shadow);
+  color: var(--text-color);
+  width: 90%;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
   text-align: center;
-  margin-top: 1rem;
+  grid-template-columns: repeat(minMax(100px, 1fr));
+  /* gap: 1rem; */
 }
 .item-container {
   display: flex;
@@ -132,12 +114,16 @@ section > h3 {
   align-items: center;
   padding: 1rem;
 }
+.item-container:nth-of-type(even) {
+  background-color: var(--background-light);
+}
 
 .item-container > p {
   font-size: 1.2em;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  padding: 1rem;
+  margin-bottom: 0.2rem;
+  /* margin-bottom: 0.5rem; */
+  /* padding: 1rem; */
 }
 
 .img-container {
@@ -157,17 +143,15 @@ section > h3 {
   z-index: 200;
   height: 100%;
   width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* background: transparent; */
   pointer-events: none;
   /* display: none; */
 }
 .alert-box {
   position: relative;
-
   width: 60%;
   background-color: rgb(248, 1, 1);
-
   margin: 0 auto;
   top: 0;
   border-radius: 10px;

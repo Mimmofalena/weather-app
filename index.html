@@ -18,6 +18,7 @@
 
     <header>What's the weather like today?</header>
     
+    <main>
 
     <div class="alert-container">
 
@@ -25,35 +26,31 @@
         <p class="alert-box_text"></p>
       </div>
     </div>
-    <!-- <form class="Input">
-      <div>
-        <label for="City Name"></label>
-        <input type="text" />
-        <button type="Submit">Go</button>
-      </div>
-    </form> -->
-
-
-  
-
-
     
     <form class="form" >
 
-        <label class="label" for="city"> Enter City
-          <input class='input' type="text" id="City" placeholder="Search..." required />
-        </label>
+        <!-- <label class="label" for="city"> Enter City -->
+          <input class='input' type="text" id="City" placeholder="Search by City" required />
+        <!-- </label> -->
         
       <button type="submit" class="btn">Submit</button>
     </form>
 
     <section class="hide display-weather">
-      <h3>Results</h3>
+      <!-- <h3>Results</h3> -->
       <div class="grid">
         <div class="item-container">
           <p>City</p>
           
             <p class="city"></p>
+         
+        </div>
+        <div class="item-container">
+          <p>State</p>
+          
+            <div class="img-container">
+            <img class="flag" alt='State Flag' src='https://flagsapi.com/IT/flat/64.png'></img>
+          </div>
          
         </div>
 
@@ -89,14 +86,16 @@
          <div class="item-container">
           <p>State</p>
          <div class="img-container">
-
-           <img class="icon-img flag-icon" alt='Weather icon' src=''></img>
+          <p class="weatherDescription"></p>
+           <!-- <img class="icon-img flag-icon" alt='Weather icon' src=''></img> -->
           </div>
          
         </div>
         
       </div>
     </section>
+        </main>
+
     
     <script src="script.js"></script>
   </body>
