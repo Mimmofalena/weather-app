@@ -115,7 +115,7 @@ const handleSubmit = async (e) => {
     
   } catch (err) {
     console.error("Weather fetch error:", err);
-    showError(`${err.message}, please try again`);
+    showError(`${err.message}. Please try again.`);
   }
 };
 
